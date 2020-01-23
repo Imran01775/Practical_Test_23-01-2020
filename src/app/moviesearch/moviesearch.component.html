@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Search Name">
+             
+            </div>
+            <div class="col-md-2">   <button type="button" class="btn btn-primary" [(ngModel)]="movieName"
+                (click)="searchMovie()">Search</button></div>
+        </div>
+        <div class="row" *ngFor="let movie of movieList">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"
+                style="text-align:center; background-color:rgb(0, 183, 255);">
+                {{movie.Title}}
+            </div>
+            <div>({{movie.Year}})</div>
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
